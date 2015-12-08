@@ -26,6 +26,7 @@ public class Solution {
 
         public void run() {
             //add your code here - добавь код тут
+            System.out.println("test");
         }
     }
 }
