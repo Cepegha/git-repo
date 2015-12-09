@@ -26,7 +26,11 @@ public class Solution {
 
         public void run() {
             //add your code here - добавь код тут
-            System.out.println("testor");
+            for (int i=countSeconds; i==0; i--){
+                if (i!=0) {
+                    System.out.println(i);
+                }
+            }
         }
     }
 }
