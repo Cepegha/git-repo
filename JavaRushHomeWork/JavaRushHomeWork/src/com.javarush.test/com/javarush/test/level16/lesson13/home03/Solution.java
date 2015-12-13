@@ -24,13 +24,20 @@ public class Solution {
 
     public static class GenerateThread extends Thread{
         public GenerateThread(){
-            for (int i=1;i<=countCreatedThreads; i++) {
-                Thread.currentThread().start();
-            }
+            super(String.valueOf(++countCreatedThreads));
+            start();
+        }
+
+        @Override
+        public String toString() {
+            return super.getName()+" created";
         }
 
         public void run() {
-
+            while (countCreatedThreads < Solution.count)
+            {
+                System.out.println(new GenerateThread());
+            }
         }
     }
 }
