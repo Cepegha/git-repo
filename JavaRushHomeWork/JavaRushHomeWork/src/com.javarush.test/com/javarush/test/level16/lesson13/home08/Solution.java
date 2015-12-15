@@ -55,11 +55,12 @@ public class Solution {
             //add your code here - добавьте код тут
             try {
                 while (!isInterrupted()) {
-                    result.add(reader.readLine());
-                    countReadStrings++;
-                }
+                    String s=reader.readLine();
+                        result.add(s);
+                        countReadStrings++;
+                    }
             } catch (Exception e) {
-            }
+                }
         }
 
         @Override
