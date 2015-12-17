@@ -13,7 +13,7 @@ public class Solution {
         double i = method3();
     }
 
-    protected void method1(String param1) {
+    protected synchronized void method1(String param1) {
         Solution solution = new Solution();
         solution.method0();
     }
@@ -22,13 +22,13 @@ public class Solution {
         param1++;
     }
 
-    double method3() {
+    synchronized double method3() {
         double random = Math.random();
         param += 40.7;
         return random + param;
     }
 
-    private void method4() {
+    private synchronized void method4() {
         sb.append(1).append(1).append(1).append(1);
     }
 
@@ -36,7 +36,7 @@ public class Solution {
         new StringBuffer().append(param2).append(param2).append(param2);
     }
 
-    public String method6(int param2) {
+    public synchronized String method6(int param2) {
         System.out.println("Thinking....");
         method7(5e-2);
         sb = new StringBuilder("Got it!.");
@@ -46,5 +46,20 @@ public class Solution {
     String method7(double param2) {
         return "" + param2;
     }
+
+   /* public static void main(String[] args) throws InterruptedException {
+        TestThread thread = new TestThread();
+        thread.start();
+    }
+
+    public static class TestThread extends Thread {
+
+        @Override
+        public void run() {
+            Solution solution = new Solution();
+
+            System.out.println(solution.method1());
+        }
+    }*/
 
 }
