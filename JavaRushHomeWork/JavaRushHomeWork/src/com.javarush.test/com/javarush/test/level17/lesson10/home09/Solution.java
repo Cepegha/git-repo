@@ -35,32 +35,40 @@ public class Solution {
             }
 
             reader2 = new BufferedReader(new FileReader(secondFileName));
-            line = "";
             while ((line = reader2.readLine()) != null) {
                 forRemoveLines.add(line);
             }
             reader.close();
-        } catch (FileNotFoundException e)
-        { System.out.println("File not found");}
-        catch (IOException e) {
-            e.printStackTrace();}
-        joinData();
-        for (String s : allLines) {
-            System.out.println(s);
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        for (String s : forRemoveLines) {
-            System.out.println(s);
+        try {
+            new Solution().joinData();
+        } catch (CorruptedDataException e) {
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
     }
 
 
-    public static void joinData() throws CorruptedDataException {
-        for (String line : allLines) {
-            for (String s2 : forRemoveLines) {
-                if (line.contains(s2)) {
-                    allLines.remove(line);
+    public void joinData() throws CorruptedDataException {
+        int countIinJ = 0;
+
+        for (String s2 : forRemoveLines) {
+            if (allLines.contains(s2)) countIinJ++;
+        }
+        if (countIinJ == forRemoveLines.size()) {
+            for (int i = 0; i < forRemoveLines.size(); i++) {
+                for (int j = 0; j < allLines.size(); j++) {
+                    if (allLines.get(j).contains(forRemoveLines.get(i))) allLines.remove(forRemoveLines.get(i));
                 }
             }
+        } else {
+            allLines.clear();
+            throw new CorruptedDataException();
         }
     }
 }
