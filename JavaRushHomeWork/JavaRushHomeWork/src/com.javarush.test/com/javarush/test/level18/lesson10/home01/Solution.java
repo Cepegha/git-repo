@@ -7,16 +7,20 @@ package com.javarush.test.level18.lesson10.home01;
 Закрыть потоки. Не использовать try-with-resources
 */
 
+import java.io.FileReader;
+import java.io.IOException;
+
 public class Solution {
-    public static void main(String[] args) {
-        char[] abc = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-        char[] fileName=args[0].toCharArray();
+    public static void main(String[] args) throws IOException {
+        FileReader fis = new FileReader (args[0]);
         int count=0;
-        for (int i=0; i<fileName.length; i++) {
-            for (int j = 0; j < abc.length; j++) {
-                if (fileName[i] == abc[j]) count++;
+        while (fis.ready()) {
+            Character ch=(char)fis.read();
+            if (String.valueOf(ch).matches("[a-zA-Z]")){
+                count++;
             }
         }
+        fis.close();
         System.out.println(count);
     }
 }
