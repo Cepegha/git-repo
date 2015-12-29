@@ -1,8 +1,8 @@
-package com.javarush.test.level18.lesson10.home03;
+package com.javarush.test.level18.lesson10.home04;
 
-/* Два в одном
-Считать с консоли 3 имени файла
-Записать в первый файл содержимого второго файла, а потом дописать в первый файл содержимое третьего файла
+/* Объединение файлов
+Считать с консоли 2 имени файла
+В начало первого файла записать содержимое второго файла так, чтобы получилось объединение файлов
 Закрыть потоки. Не использовать try-with-resources
 */
 
@@ -13,22 +13,17 @@ public class Solution {
         BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
         String file_one=reader.readLine();
         String file_two=reader.readLine();
-        String file_three=reader.readLine();
 
         FileInputStream inputStream_two=new FileInputStream(file_two);
-        FileInputStream inputStream_three=new FileInputStream(file_three);
         FileOutputStream outputStream=new FileOutputStream(file_one, true);
 
         while ((inputStream_two.available()>0)){
-            outputStream.write(inputStream_two.read());
-        }
-
-        while ((inputStream_three.available()>0)){
-            outputStream.write(inputStream_three.read());
+            byte[] buffer = new byte[inputStream_two.available()];
+            int count = inputStream_two.read(buffer);
+            outputStream.write(buffer,0,count);
         }
 
         inputStream_two.close();
-        inputStream_three.close();
         outputStream.close();
         reader.close();
     }
