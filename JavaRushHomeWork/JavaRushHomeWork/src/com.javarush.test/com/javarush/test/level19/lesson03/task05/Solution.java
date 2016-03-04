@@ -15,6 +15,7 @@ CA Canada
 public class Solution {
 
     //test
+
     public static void main(String[] args) {
       Customer customer=new Customer() {
           @Override
@@ -66,15 +67,15 @@ public class Solution {
 
         @Override
         public String getCountryCode() {
-            String nameCountryKey;
+
+            String country="";
             for (Map.Entry<String, String> entry: countries.entrySet()) {
                 if (customer.getCountryName().equals(entry.getValue()))
                 {
-                    String key=entry.getKey();
-                    return key;
+                    country=entry.getKey();
                 }
             }
-            return null;
+            return country;
         }
 
         @Override
@@ -96,7 +97,8 @@ public class Solution {
 
         @Override
         public String getDialString() {
-            return null;
+            String dialStringTemp=contact.getPhoneNumber();
+            return "callto://"+dialStringTemp.replaceAll("[()-]","");
         }
     }
 
