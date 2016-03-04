@@ -1,8 +1,5 @@
 package com.javarush.test.level19.lesson03.task04;
 
-import java.io.IOException;
-import java.util.Scanner;
-
 /* И еще один адаптер
 Адаптировать Scanner к PersonScanner.
 Классом-адаптером является PersonScannerAdapter.
@@ -12,16 +9,48 @@ import java.util.Scanner;
 В файле хранится большое количество людей, данные одного человека находятся в одной строке. Метод read() должен читать данные одного человека.
 */
 
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
 public class Solution {
+
+        //test
+    /*public static void main(String[] args) throws IOException {
+        Scanner in = new Scanner(new File("d:/1.txt"));
+        //while (in.hasNext()){System.out.println(in.nextLine());}
+        PersonScannerAdapter adapter= new PersonScannerAdapter(in);
+        System.out.println(adapter.read());
+        System.out.println(adapter.read());
+        System.out.println(adapter.read());
+        adapter.close();
+    }*/
+
     public static class PersonScannerAdapter implements PersonScanner{
-        private Scanner scanner;
-        PersonScannerAdapter (Scanner scanner){
-            this.scanner = scanner;
+
+        Scanner scanner;
+
+        PersonScannerAdapter(Scanner scanner){
+            this.scanner=scanner;
         }
 
         @Override
         public Person read() throws IOException {
-            return this.scanner.read();
+
+            Person person = null;
+            if (scanner.hasNext())
+            {
+                String lastName = scanner.next();
+                String firstName = scanner.next();
+                String middleName = scanner.next();
+                int day = scanner.nextInt();
+                int month = scanner.nextInt();
+                int year = scanner.nextInt();
+                Calendar birsDate = new GregorianCalendar(year, --month, day);
+                person = new Person(firstName, middleName,lastName, birsDate.getTime());
+            }
+            return person;
         }
 
         @Override
