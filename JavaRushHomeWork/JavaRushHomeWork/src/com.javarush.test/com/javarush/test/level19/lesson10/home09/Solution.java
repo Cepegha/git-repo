@@ -20,8 +20,6 @@ fifth
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Solution {
     public static TestString testString = new TestString();
@@ -41,30 +39,17 @@ public class Solution {
 
         //Преобразовываем записанные в наш ByteArray данные в строку
         String result = outputStream.toString();
-
-        //разворачиваем строку
-        String temp3="";
-        StringBuilder stringBuilder = new StringBuilder(result);
-        Pattern pattern = Pattern.compile("\\n");
-        Matcher matcher= pattern.matcher(stringBuilder);
-        boolean resultMatch = matcher.find();
-        //if (resultMatch) {
-         //   do {
-                //matcher.find();
-                //stringBuilder.insert(matcher.end(), "JavaRush - курсы Java онлайн\n");
-        while (matcher.find())
-        {System.out.println(stringBuilder.replace(matcher.end(), matcher.end(), "JavaRush - курсы Java онлайн\n"));
-        matcher.find()=false;}
-                //temp3=stringBuilder.substring(0, matcher.start()-1)+"JavaRush - курсы Java онлайн\n"+stringBuilder.substring(matcher.end());
-                //resultMatch = matcher.find();
-          //  } while (resultMatch);
-        //}
-
-        //Возвращаем все как было
         System.setOut(consoleStream);
-
-        //выводим ее в консоль+
-        System.out.println(stringBuilder);
+        //разворачиваем строку
+        String[] lines=result.split("\n");
+        for (int i=0; i<lines.length; i++) {
+            if (i%2!=0){
+            System.out.println(lines[i]);
+                System.out.println("JavaRush - курсы Java онлайн");}
+            else {
+                System.out.println(lines[i]);
+            }
+        }
     }
 
     public static class TestString {
