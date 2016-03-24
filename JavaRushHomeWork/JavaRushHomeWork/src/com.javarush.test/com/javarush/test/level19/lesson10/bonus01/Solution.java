@@ -46,7 +46,7 @@ public class Solution {
             }
         }
         //read 2 file
-        String[] lines_two=new String[(int)readerFile_two.lines().count()];
+        String[] lines_two=new String[100];
         while (readerFile_two.ready()) {
             String s2 = readerFile_two.readLine();
             lines_two = s2.split("\n");

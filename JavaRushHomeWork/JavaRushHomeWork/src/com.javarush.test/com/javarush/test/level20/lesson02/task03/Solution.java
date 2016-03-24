@@ -1,8 +1,10 @@
 package com.javarush.test.level20.lesson02.task03;
 
 import java.io.*;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 /* Знакомство с properties
 В методе fillInPropertiesMap считайте имя файла с консоли и заполните карту properties данными из файла.
@@ -18,19 +20,15 @@ public class Solution {
         BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
         File file =new File (reader2.readLine());
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-        OutputStream outputStream = new FileOutputStream(file);
-        InputStream inputStream = new FileInputStream(file);
 
+            InputStream inputStream = new FileInputStream(file);
             load(inputStream);
-           // save(outputStream);
-
-
-            for (Map.Entry<String, String> stringStringEntry : properties.entrySet()) {
-                System.out.println(stringStringEntry.getKey()+" "+stringStringEntry.getValue());
-            }
-
-            outputStream.close();
             inputStream.close();
+
+            OutputStream outputStream = new FileOutputStream(file);
+            save(outputStream);
+            outputStream.close();
+
             reader.close();
             reader2.close();
         } catch (Exception e) {
@@ -40,33 +38,31 @@ public class Solution {
 
     public void save(OutputStream outputStream) throws Exception {
         //implement this method - реализуйте этот метод
-        PrintWriter writer = new PrintWriter(outputStream);
-        for (Map.Entry<String, String> entry : properties.entrySet()) {
-            writer.println(entry.getKey()+":"+entry.getValue());
+        Properties saveProperties = new Properties(); //создаем properties
+        for (Map.Entry<String, String> prop : properties.entrySet()) { //проходимся по mape
+            saveProperties.setProperty(prop.getKey(), prop.getValue());//сохраняем данные в наш new prop
         }
-        writer.flush();
-        writer.close();
+        saveProperties.save(outputStream, null); //записываем данные
     }
 
     public void load(InputStream inputStream) throws Exception {
         //implement this method - реализуйте этот метод
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-        String s;
-
-        while (reader.ready()) {
-            s = reader.readLine();
-            if (s.substring(0,1).equals("\uFEFF")) s=s.substring(1, s.length());
-            String[] lines = s.split(":");
-            //System.out.println(lines[0]+" "+lines[1]);
-            properties.put(lines[0], lines[1]);
+        Properties property = new Properties();
+        property.load(inputStream);
+        Enumeration enumeration = property.keys();
+        Enumeration enumeration_val = property.elements();
+        while (enumeration.hasMoreElements()){
+            String key = enumeration.nextElement().toString();
+            String value = enumeration_val.nextElement().toString();
+           // System.out.println(key+" "+value);
+            properties.put(key, value);
         }
-        reader.close();
     }
 
     //d:/1.properties
+/*
     public static void main(String[] args) throws IOException {
         Solution solution=new Solution();
         solution.fillInPropertiesMap();
-
-    }
+    }*/
 }
