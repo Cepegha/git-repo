@@ -17,9 +17,9 @@ public class Solution {
     public void fillInPropertiesMap() throws IOException {
         //implement this method - реализуйте этот метод
         try {
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
-        File file =new File (reader2.readLine());
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+            BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
+            File file =new File (reader2.readLine());
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
 
             InputStream inputStream = new FileInputStream(file);
             load(inputStream);
@@ -54,7 +54,7 @@ public class Solution {
         while (enumeration.hasMoreElements()){
             String key = enumeration.nextElement().toString();
             String value = enumeration_val.nextElement().toString();
-           // System.out.println(key+" "+value);
+            // System.out.println(key+" "+value);
             properties.put(key, value);
         }
     }
