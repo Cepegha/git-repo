@@ -16,11 +16,14 @@ getNumbers должен возвращать все такие числа в п�
 public class Solution {
     public static int[] getNumbers(int N) {
         int[] result = null;
+        int S=N;
+        int  M=(""+S).length();
+        System.out.println(M);
+
         return result;
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        getNumbers(10);
+        System.out.println(getNumbers(370));
     }
 }
