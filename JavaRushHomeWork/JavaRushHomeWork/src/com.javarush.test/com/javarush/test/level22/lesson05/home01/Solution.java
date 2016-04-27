@@ -40,28 +40,16 @@ public class Solution {
     }
 
     public String getPartOfString(String string, String threadName) {
-        int a,b;
-        if (string==null||string.equals(""))
-            Thread thread_new = Thread.currentThread();
-        Thread.currentThread();
-        {
-           // throw  new TooShortStringException();
-        }
-        char[] c =string.toCharArray();
-        int count = 0;
-        for(char x:c){
-            if(String.valueOf(x).equals("\t")){
-                count++;
-            }
-        }
-        if (count>1){
-            //System.out.println(string);
-            a = string.indexOf("\t");
-            b = string.lastIndexOf("\t");}
-        else {
-           // throw  new TooShortStringException();
+        String result;
+
+        try {
+            result = string.substring(string.indexOf("\t")+1, string.lastIndexOf("\t"));
+        } catch (Exception   e){
+            if(Solution.FIRST_THREAD_NAME.equals(threadName)) throw new TooShortStringFirstThreadException(e);
+            else if (Solution.SECOND_THREAD_NAME.equals(threadName)) throw new TooShortStringSecondThreadException(e);
+            else throw new RuntimeException(e);
         }
 
-        return string.substring(a+1,b);
+        return result;
     }
 }
