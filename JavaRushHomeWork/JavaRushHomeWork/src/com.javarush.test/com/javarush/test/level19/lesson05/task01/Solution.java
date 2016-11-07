@@ -11,18 +11,13 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
-        FileReader file_one= new FileReader(reader.readLine());
-        FileWriter file_two= new FileWriter(reader.readLine());
-
-        while (file_one.ready())
-        {
-            int buffer=file_one.read();
-            file_two.write(file_one.read());
-        }
-
-        reader.close();
-        file_one.close();
-        file_two.close();
+        int y = 5;
+        int x = 0;
+        if(y % 10 == 5)
+            x = 5;
+        x += y;
+        else
+        x = -1;
+        System.out.println(x);
     }
 }
