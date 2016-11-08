@@ -2,60 +2,60 @@
 <items version="2" >
 
     <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="dc7d86d2be40c66af4230de1b2f94a661be13084">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\instant-run_9974c706d8f68fd27c0eaa7668372c2e91b5f0bc.jar" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_a563e33c9b502b4c02bc923d2a36e5150656a9c2.jar" />
     </item>
     <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_5fb8bf0697d56b314dc4acc7231a1a7c1073fca4.jar" />
-    </item>
-    <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="bd2e86c7c0b8348f6fcd4b70e06cf84f1cd2953c">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\instant-run-bootstrap_1301a71f34a610696f8c38bd36ed0b6d02bba85c.jar" />
-    </item>
-    <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_6eaf7586168d3df7cfceb28308cdcc07a6a91868.jar" />
+        sha1="cd0d4defbf69b1aed26357888d9ceafdd7749e9e">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\instant-run-bootstrap_0c6568bdf484d944f3a9128b40154708e853ec6c.jar" />
     </item>
     <item
         jar="D:\sergei\android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
         jumboMode="true"
         revision="22.0.1"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_0e452f473bfe3c1ee6e306141decdf029bf7f368.jar" />
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_0e452f473bfe3c1ee6e306141decdf029bf7f368.jar" />
     </item>
     <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_5264e51b3da431515812b19bd19afcda30778a2d.jar" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_bf756d7a38ad62e0fbc1f12079f600c07e3d0afb.jar" />
     </item>
     <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_2b7df35801ce6c8be1096b19934c2eae8f3c8115.jar" />
-    </item>
-    <item
-        jar="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
         jumboMode="true"
         revision="22.0.1"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\sergei\java\Startandroid\P0271_GetIntentAction\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_8969470eee42ce23044573f40417b18385d78d41.jar" />
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_567875d0299512319e435cf36d7dc9e3fe39d2e6.jar" />
+    </item>
+    <item
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="eb8bb05bc9dc0486a9bfaf1d880d06435e90f242">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\instant-run_efb29bbe2fab98d94c9a702789e04f0b831c336b.jar" />
+    </item>
+    <item
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_269bf330168a567f98cd91935c47714f7fec26ac.jar" />
+    </item>
+    <item
+        jar="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\sergei\SmartGit\Startandroid\P0311_SimpleIntents\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_bedc38d3b17c7ca43e14c8d93ec617484830d8a4.jar" />
     </item>
 
 </items>

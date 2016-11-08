@@ -1,1 +1,1 @@
-include ':P0231_OneActivityState', ':P0231_OneActivityState', ':P0213_les', ':P0241_TwoActivityState', ':P0261_IntentFilter', ':P0271_GetIntentAction'
+include ':P0231_OneActivityState', ':P0231_OneActivityState', ':P0213_les', ':P0241_TwoActivityState', ':P0261_IntentFilter', ':P0271_GetIntentAction', ':P0281_IntentExtras', ':P0291_simpleactivityresult', ':P0301_activityresult', ':P0311_SimpleIntents', ':P0311_SimpleIntents'
